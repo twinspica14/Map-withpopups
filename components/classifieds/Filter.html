@@ -1,0 +1,26 @@
+
+
+<div class="filters" layout-align="center center" ng-show="showFilters"  layout="row">
+    <md-input-container layout="row">
+      <label>Enter Search Term</label>
+      <input type="text" ng-model="classifiedsFilter" />
+    </md-input-container>
+
+    <md-input-container>
+      <label>Category</label>
+      <md-select ng-model="category">
+        <md-option ng-repeat="category in categories" value="{{ category }}">
+          {{category}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+    <md-input-container>
+      <md-button class="md-warn" ng-click="classifiedsFilter=''; category=''>
+        Clear
+      </md-button>
+    </md-input-container>
+    <md-button ng-click="cancel()"> Cancel 
+          </md-button> 
+
+</div>
